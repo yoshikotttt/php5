@@ -21,7 +21,7 @@
             <div class="box">
                 <input type="submit" value="ログイン">
             </div>
-            登録がまだの方は<a href="signin.php">こちら</a>
+            登録がまだの方は<a href="new.php">こちら</a>
         </div>
     </form>
 
