@@ -1,5 +1,8 @@
 <?php
+// エラーを出力する 
+ini_set( 'display_errors', 1 );
 
+//関数とパスワードの取得
 include('function.php');
 include('config.php');
 

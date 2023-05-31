@@ -1,5 +1,11 @@
 <?php
 
+// エラーを出力する 
+ini_set( 'display_errors', 1 );
+
+
+
+//関数とパスワードの取得
 include('function.php');
 include('config.php');
 
@@ -180,6 +186,7 @@ $json = json_encode($v, JSON_UNESCAPED_UNICODE);
     </div>
 
     <script>
+        //不要...?
         const json = JSON.parse('<?= $json ?>');
         console.log(json);
 
