@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // エラーを出力する 
 ini_set( 'display_errors', 1 );
 
@@ -9,10 +11,17 @@ include('config.php');
 
 
 //POSTでデータ取得
-$u_name = $_POST["u_name"];
-$u_id = $_POST["u_id"];
-$u_pw = $_POST["u_pw"];
-$life_flg = 1;
+// $u_name = $_POST["u_name"];
+// $u_id = $_POST["u_id"];
+// $u_pw = $_POST["u_pw"];
+// $life_flg = 1;
+
+//nullを返す
+$name =filter_input(INPUT_POST,"name");
+$lid = filter_input(INPUT_POST,"lid");
+$lpw = filter_input(INPUT_POST,"lpw");
+$kanri_flg = filter_input(INPUT_POST,"kanri_flg");
+$lpw = password_hash($lpw,PASSWORD_DEFAULT);
 
 
 //DB接続後のdb_connをもらう

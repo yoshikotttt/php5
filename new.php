@@ -21,10 +21,15 @@
             <div class="box">
                 パスワード　<input type="text" name="u_pw">
             </div>
+            <div>
+                <p>管理フラグ</p>
+                    一般<input type="radio" name="kanri_flg" value="0">　
+                    管理者<input type="radio" name="kanri_flg" value="1">
+            </div>
             <div class="box">
                 <input type="submit" value="登録">
             </div>
-            
+
         </div>
     </form>
 </body>

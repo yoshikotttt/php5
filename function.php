@@ -40,3 +40,16 @@ function redirect($page){
 function h($val){
     return  htmlspecialchars($val,ENT_QUOTES);
     }
+
+
+    //SessionCheck(スケルトン)
+//セッションID持ってて、あっていなかったら、あっていたら新しいid
+//変更されたくない場所に入れる,update,delite,detail,
+function sschk(){
+    if(!isset($_SESSION["chk_ssid"]) || $_SESSION["chk_ssid"]!=session_id()){
+      exit("Login Error");
+   }else{
+      session_regenerate_id(true);
+      $_SESSION["chk_ssid"] = session_id();
+   }
+  }
